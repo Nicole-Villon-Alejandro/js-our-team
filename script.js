@@ -41,13 +41,13 @@ const teamMembers = [
 const teamContainer = document.querySelector('.team-container')
 
 
-  for (let i = 1; i < teamMembers.length; i++) {
+  for (let i = 0; i < teamMembers.length; i++) {
     let element = teamMembers[i]
   
     teamContainer.innerHTML += `
     <div class="team-card">
             <div class="card-image">
-              <img src='img/${element.img}' alt="/${element.img}" />
+              <img src='img/${element.img}' alt="${element.name}" />
             </div>
             <div class="card-text">
               <h3>${element.name}</h3>
@@ -63,14 +63,14 @@ const teamContainer = document.querySelector('.team-container')
 
 
 
-  /*for (let i = 1; i < teamMembers.length; i++) {
+  /*for (let i = 0; i < teamMembers.length; i++) {
     let element = teamMembers[i]
   
-    teamContainer.innerHTML += `
+  teamContainer.innerHTML += `
     <div id="teamContainer" class="flex">
             <div class="flex">
                 <figure>
-                    <img height="90px" src="./img/${element.img}" alt="">
+                    <img height="90px" src="./img/${element.img}" alt="${element.name}">
                 </figure>
                 <div class="flex flex-column">
                     <h5>${element.role}</h5>
