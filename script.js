@@ -41,13 +41,13 @@ const teamMembers = [
 const teamContainer = document.querySelector('.team-container')
 
 
-  for (let i = 0; i < teamMembers.length; i++) {
+  for (let i = 1; i < teamMembers.length; i++) {
     let element = teamMembers[i]
   
     teamContainer.innerHTML += `
     <div class="team-card">
             <div class="card-image">
-              <img src='img/${element.img}' alt="${element.name}" />
+              <img src='img/${element.img}' alt="/${element.img}" />
             </div>
             <div class="card-text">
               <h3>${element.name}</h3>
@@ -55,7 +55,7 @@ const teamContainer = document.querySelector('.team-container')
               <span>${element.email}</span>
               
             </div>
-          </div>
+    </div>
     
     `
   
