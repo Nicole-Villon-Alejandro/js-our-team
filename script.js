@@ -36,3 +36,49 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+const teamContainer = document.querySelector('.team-container')
+
+
+  for (let i = 0; i < teamMembers.length; i++) {
+    let element = teamMembers[i]
+  
+    teamContainer.innerHTML += `
+    <div class="team-card">
+            <div class="card-image">
+              <img src='img/${element.img}' alt="${element.name}" />
+            </div>
+            <div class="card-text">
+              <h3>${element.name}</h3>
+              <p>${element.role}</p>
+              <span>${element.email}</span>
+              
+            </div>
+          </div>
+    
+    `
+  
+  }
+
+
+
+  /*for (let i = 1; i < teamMembers.length; i++) {
+    let element = teamMembers[i]
+  
+    teamContainer.innerHTML += `
+    <div id="teamContainer" class="flex">
+            <div class="flex">
+                <figure>
+                    <img height="90px" src="./img/${element.img}" alt="">
+                </figure>
+                <div class="flex flex-column">
+                    <h5>${element.role}</h5>
+                    <span>${element.email}</span>
+                </div>
+            </div>    
+    </div>
+    `
+  
+  }*/
+
